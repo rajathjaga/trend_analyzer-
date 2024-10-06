@@ -22,7 +22,7 @@ To run this project, you need to have the following installed:
 1. **Clone the repository:**
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/rajathjaga/trend_analyzer-.git
    cd post-composer-app
 
 2. **Create and activate a virtual environment:**
@@ -36,3 +36,31 @@ To run this project, you need to have the following installed:
    ```sh
    pip install -r requirements.txt
 
+## Running the Application
+
+1. **Start the Streamlit application:**
+
+   ```sh
+   streamlit run app.py
+
+## Usage
+
+- Compose a Post: 
+      Write your post in the text area provided on the app interface and click the "Post" button. Your post will be processed by AWS Lambda and stored in DynamoDB.
+
+- Trending Hashtags: 
+      After a successful post, trending hashtags are updated automatically to reflect the latest trending terms in real time.
+
+## Technologies Used
+
+- Python: Backend logic using requests, json, and other standard libraries.
+- Streamlit: Framework for creating the web UI.
+- AWS Lambda: Serverless function to handle post requests and process data.
+- DynamoDB: NoSQL database for storing posts and hashtags.
+
+## How it Works
+
+- Users compose posts, which may contain hashtags (e.g., #example).
+- Posts are sent to an AWS Lambda function, which processes and stores them in DynamoDB.
+- When a new post is successfully submitted, users can click the 'Get Trending Hashtags' button to fetch and update the latest trending hashtags
+- Users can view the trending hashtags in real time.

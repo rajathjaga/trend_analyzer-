@@ -1,0 +1,22 @@
+# Ignore virtual environment directories
+env/
+.env/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore settings and sensitive information
+.env
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore log files
+*.log
+
+# Ignore Streamlit cache files
+.streamlit/
+
+# Ignore dependency directory
+node_modules/
